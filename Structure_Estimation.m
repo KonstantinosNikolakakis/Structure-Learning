@@ -89,9 +89,10 @@ for q=0.00:qstep:qmax
         ncounter=ncounter+1;
         % Estimate the average number of mismatched edges and the probability of incorrect recovery through 100 independent runs
         [temp_number_of_mismatched_edges,temp_prob_of_missing_at_least_one_edge] = Monte_Carlo_Iterations_structure_learning(noisy,runs,n,adjacency);
-        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
         number_of_mismatched_edges(qcounter,ncounter)=sum(temp_number_of_mismatched_edges);
         prob_of_missing_at_least_one_edge(qcounter,ncounter)=sum(temp_prob_of_missing_at_least_one_edge);
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     end
 end
 
