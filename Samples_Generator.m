@@ -1,3 +1,7 @@
+%%% The function samples_f generates tree structured data by using the conditional distributions of the model.
+%%% The distribution of the root is considered to be uniform (line 19).
+%%% Requires: Number of samples, number of nodes p, the tree [parent_node,child_node] and the conditional distributions.
+%%% Returns: The matrix Samples.
 function  samples_f= Samples_Generator(total_number_of_samples,p,child_node,parent_node,Conditional_Prob)
     samples=zeros(total_number_of_samples,p);
     for N=1:total_number_of_samples
